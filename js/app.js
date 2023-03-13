@@ -6,6 +6,16 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+fetch('./json/products.json',{
+  method: 'GET',
+  headers: {
+  "Accept": "application/json",
+  'Content-Type': 'application/json'
+  }
+})
+.then(response => { return response.json();})
+.then(responseData => {console.log(responseData); return responseData;})
+
 productos.forEach((product) => {
   let content = document.createElement("div");
   content.className = "card";
