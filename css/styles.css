@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+  }
+  /*navbar*/
+  .nav-container {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+  }
+  .navbar {
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: #1b1b1b;
+  }
+  
+  .navbar-logo {
+    justify-self: start;
+    margin-left: 20px;
+    color: #fff;
+    margin-top: 4vh;
+    cursor: pointer;
+  }
+  
+  .ver-carrito {
+    color: #fff;
+    font-family:'Noto Sans', sans-serif;
+    font-size: 25px;
+    margin-right: 20px;
+    margin-top: 3.5vh;
+    cursor: pointer;
+  }
+  
+  /*Banner styles*/
+  .banner {
+    font-family: 'Noto Sans', sans-serif;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: url(/img/fondo.png);
+  }
+  
+  .banner-container {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    padding: 15% 0;
+  }
+  
+  .banner h1 {
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 0;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 62px;
+    font-weight: bold;
+  }
+  
+  .banner p {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 30px;
+    color: black;
+    opacity: 0.7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /*product cards*/
+  .shop-content {
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .card {
+    font-family: 'Noto Sans', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    margin: 10px;
+    border-radius: 1rem;
+  }
+  
+  .card > img {
+    width: 80%;
+    border-radius: 1rem;
+  }
+  
+  .price {
+    font-family: 'Noto Sans', sans-serif;
+    color: black;
+    font-size: 22px;
+  }
+  
+  .card:hover{
+    scale: 1.09;
+    box-shadow: black 10px;
+    transition: .3s;
+  }
+  .card button {
+    font-family: 'Noto Sans', sans-serif;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 70%;
+    font-size: 10px;
+    cursor: pointer;
+   
+    
+  }
+
+
+  .card button:hover {
+    opacity: 0.7;
+    transform: scale(0.85);
+    transition: .5s;
+    
+  }
+  
+  /*modal content*/
+  .modal-container {
+    font-family: 'Noto Sans', sans-serif;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #fff;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+  }
+  
+  .modal-container::-webkit-scrollbar {
+    display: none;
+  }
+  .modal-header {
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    background-color: gray;
+    color: #000000;
+    width: 100%;
+  }
+  
+  .modal-header-title {
+    font-family: 'Noto Sans', sans-serif;
+    justify-self: start;
+  }
+  
+  .modal-header-button {
+    font-family: 'Noto Sans', sans-serif;
+    cursor: pointer;
+    transform: scale(0.85);
+    transition: .5s;
+  }
+  
+  .modal-container > .modal-content {
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+  }
+  
+  .modal-container > div > img {
+    border-radius: 20px;
+    height: 120px;
+    width: 120px;
+  }
+  
+  .total-content {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+  }
+    
+  /*delete button product*/
+  .delete-product {
+    transform: scale(0.85);
+    transition: .5s;
+    cursor: pointer;
+  }
+  
+  /*MQ*/
+  @media screen and (max-width: 850px) {
+    .contenedor {
+      display: block;
+    }
+    .contenedor-items{
+        width: 100% !important;
+    }
+    .carrito{
+        width: 100%;
+    }
+  }
+  /*CarritoCounter*/
+  .cantidad-carrito {
+    font-family: 'Noto Sans', sans-serif;
+    background-color:gray;
+    color:black;
+    border-radius: 100%;
+    font-size: 12px;
+    padding: 4px;
+    top: 37px;
+    right: 14px;
+    position: absolute;
+    display: none;
+  }
+  
+  .sumar {
+    cursor: pointer;
+  }
+  
+  .restar {
+    cursor: pointer;
+  }
